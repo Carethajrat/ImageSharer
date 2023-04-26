@@ -1,0 +1,111 @@
+<!-- Navigation in here -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCenteredExample"
+      aria-controls="navbarCenteredExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarCenteredExample"
+    >
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link hover-effect active"
+            aria-current="page"
+            href="/"
+            aria-label="Home"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Home"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/113019349/231142212-0c7e751e-96ae-4977-bd2b-fcf607edaf6a.png"
+              alt="Home page"
+              height="55"
+              width="55"
+            />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link hover-effect"
+            href="{% url 'feed:post' %}"
+            aria-label="Post"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Post"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/113019349/231142207-1134024a-122d-44b3-ad33-2cb0cddcece4.png"
+              alt="Add new post"
+              height="55"
+              width="55"
+            />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link hover-effect"
+            href="{% url 'feed:contact' %}"
+            aria-label="Contact Us"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Contact Us"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/113019349/231142203-015e6901-e700-4a45-974d-45c4e90636d7.png"
+              alt="Contact us"
+              height="55"
+              width="55"
+            />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link hover-effect"
+            href="{% url 'feed:about' %}"
+            aria-label="About Us"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="About Us"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/113019349/231142201-3f8ebb17-4c04-45f9-b1e2-dd2d26718cd2.png"
+              alt="About us"
+              height="55"
+              width="55"
+            />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link hover-effect"
+            href="{% url 'feed:coming' %}"
+            tabindex="-1"
+            aria-disabled="true"
+            aria-label="Coming soon"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="Coming Soon"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/113019349/231142191-8861767b-482b-45ce-8441-74e2a2e90c80.png"
+              alt="coming soon"
+              height="55"
+              width="55"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

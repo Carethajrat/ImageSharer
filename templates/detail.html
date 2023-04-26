@@ -1,0 +1,28 @@
+<!-- Detail about selected image section in here -->
+{% extends 'base.html' %}
+ {% block title %} Enlarged View Caretsplash -
+Beautiful Free Images & Pictures {% endblock title %} 
+
+
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 offset-sm-1 py-5">
+      <h3 class="text-capitalize">{{object.text}}</h3>
+      <div class="text-monospace">
+        <a href="{{ object.image.url }}" class="btn btn-success btn-lg" download
+          >Download</a
+        >
+      </div>
+      <br />
+      <img
+        src="{{object.image.url}}"
+        alt=""
+        height="auto"
+        width="100%"
+        class="img-fluid"
+      />
+    </div>
+  </div>
+</div>
+{% endblock body %}

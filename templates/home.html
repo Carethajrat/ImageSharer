@@ -1,0 +1,57 @@
+<!-- Home page in here -->
+{% extends 'base.html' %} 
+{% load thumbnail%}
+
+ {% block title %}Home Caretsplash
+- Beautiful Free Images & Pictures
+ {% endblock %} 
+ 
+ {% block body %}
+<div class="container">
+  <div class="row row-cols-sm-1 row-cols-lg-3 mt-5">
+    {% for post in posts %}
+    <div class="col-sm-6 col-lg-3">
+      <div class="card mb-5 hover-effect-home">
+        {% thumbnail post.image "200x200" crop="center" as im%}
+        <img src="{{ im.url }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h4 class="card-text fw-bold text-capitalize">{{ post.text}}</h4>
+          <div class="d-flex">
+            <div class="flex-grow-1">
+              <a
+                href="{% url 'feed:detail' post.id %}"
+                class="btn btn-dark text-sm"
+                >Full Image</a
+              >
+            </div>
+            <div class="">
+              <a
+                href="{{ im.url }}"
+                class="btn btn-warning bg-gradient"
+                download
+                >Download</a
+              >
+            </div>
+          </div>
+        </div>
+        {% endthumbnail %}
+      </div>
+    </div>
+    {% empty %}
+    <div class="col-md-6 col-lg-6 col-sm-4 text-center my-5 offset-md-3">
+      <img
+        src="https://user-images.githubusercontent.com/113019349/231137535-f2a13776-8d84-4c6e-ad70-99d127c6f37f.png"
+        alt="no content"
+      />
+      <h1>No Images to show</h1>
+      <h3>How about you add first?</h3>
+      <a
+        href="{% url 'feed:post' %}"
+        class="btn btn-lg btn-dark text-white bg-gradient"
+        >Upload Image</a
+      >
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

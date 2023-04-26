@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+ {% block title %} About Caretsplash - Beautiful Free
+Images & Pictures {% endblock title %} 
+
+{% block body %}
+<div class="container my-5">
+  <div class="row row-cols-lg-2 row-cols-sm-1">
+    <div class="col-lg-8 col-md-6 col-sm-8 my-lg-5 p-5">
+      <br />
+      <h1 class="fw-bold">Caretsplash</h1>
+      <h3><small>Beautiful Free Images & Pictures</small></h3>
+      <br />
+      <p class="text-dark fw-light fs-4">
+        Free high-resolution images brought to you by the world’s most generous
+        community of photographers.
+      </p>
+      <br />
+      <a
+        href="{% url 'feed:post' %}"
+        class="btn btn-lg btn-dark text-white bg-gradient fw-bold hover-effect my-2 mx-2 py-2"
+        >Upload Image</a
+      >
+      <a
+        href="{% url 'feed:contact' %}"
+        class="btn btn-lg btn-info text-white bg-gradient fw-bold hover-effect my-2 mx-2 py-2"
+        >Contact Us</a
+      >
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="row row-cols-2">
+        <div class="col-6">
+          <img
+            src="https://user-images.githubusercontent.com/113019349/233606880-1b98d667-820b-441f-bb16-97844382e83c.jpg"
+            alt=""
+            width="100%"
+            class="rounded mb-5"
+          />
+        </div>
+
+        <div class="col-6">
+          <img
+            src="https://user-images.githubusercontent.com/113019349/233606875-f052db90-ca29-4046-8467-d989628f6e71.jpg"
+            alt=""
+            width="100%"
+            class="rounded"
+          />
+        </div>
+        <div class="col-6">
+          <img
+            src="https://user-images.githubusercontent.com/113019349/233609652-81d87636-4ed7-405b-8556-19ad119319d3.jpg"
+            alt=""
+            width="100%"
+            class="rounded"
+          />
+        </div>
+        <div class="col-6">
+          <img
+            src="https://user-images.githubusercontent.com/113019349/233609061-729b55c3-812a-46a2-829d-74d1baec19dc.jpg"
+            alt=""
+            width="100%"
+            class="rounded"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,30 @@
+<!-- Post an image form in here -->
+{% extends 'base.html' %} 
+{% block title %}Upload new post Caretsplash -
+Beautiful Free Images & Pictures{% endblock title %} 
+
+{% block body %}
+<div class="d-flex justify-content-center">
+  <form
+    method="POST"
+    action=""
+    enctype="multipart/form-data"
+    class="col-sm-8 col-md-6 py-5 px-5 my-5 offset-1 bg-gradient rounded shadow-lg fw-bold fs-lg-3 text-monospace"
+    style="background-color: rgb(238, 232, 203)"
+  >
+    {% csrf_token %}
+    <h3 class="text-dark fw-bold">Post an image</h3>
+    <br />
+    {{ form.as_p }}
+    <div>
+      <br />
+      <button
+        type="submit"
+        class="btn btn-lg btn-warning fw-bold border border-dark border-2 hover-effect"
+      >
+        Submit Post
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

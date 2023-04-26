@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+{% block title %} What's Coming up Next? Caretsplash -
+Beautiful Free Images & Pictures {% endblock title %} 
+
+{% block body %}
+<div class="container">
+  <div class="col-md-6 col-lg-6 col-sm-4 text-center my-5 offset-md-3">
+    <img
+      src="https://user-images.githubusercontent.com/113019349/231421277-d7e8f800-20d0-45ba-95b4-1b2bd8b60312.png"
+      alt="no content"
+    />
+    <h1>Find out what's coming next right up !</h1>
+    <a
+      href="{% url 'feed:post' %}"
+      class="btn btn-lg btn-dark text-white bg-gradient hover-effect my-2 py-2"
+      >Upload Image</a
+    >
+  </div>
+</div>
+{% endblock body %}

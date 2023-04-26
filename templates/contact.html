@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% block title %} Contact Caretsplash - Beautiful Free
+Images & Pictures {% endblock title %} 
+
+{% block body %}
+<!-- Jumbotron -->
+<div
+  class="container-fluid bg-image p-5 text-center fw-bold fs-1 text-white my-2"
+  style="
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+      ),
+      url('https://user-images.githubusercontent.com/113019349/233606853-5f9cbf4b-2e6d-4fd2-8f29-1d5c88be6801.jpg');
+  "
+>
+  Contact Us
+</div>
+
+<!-- contact us -->
+<div class="d-flex justify-content-md-center">
+  <form
+    method="POST"
+    action=""
+    class="col-sm-6 col-md-5 col-lg-3 py-5 px-5 fs-5 my-5 fw-light"
+  >
+    {% csrf_token %} {{ form.as_p }}
+    <div>
+      <br />
+      <button type="submit" class="btn btn-info btn-lg fw-bold hover-effect">
+        Let's Talk
+      </button>
+    </div>
+  </form>
+</div>
+
+{% endblock body %}
