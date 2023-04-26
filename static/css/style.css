@@ -1,0 +1,13 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.hover-effect:hover{
+    transform: scale(1.2);
+}
+.hover-effect-home:hover{
+    transform: translate(0px,-10px);
+}
+
+
